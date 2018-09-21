@@ -1,0 +1,11 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: app
+#  annotations:
+#    kubernetes.io/ingress.global-static-ip-name: "demo-ip"
+spec:
+  backend:
+    serviceName: api
+    servicePort: 80
+
