@@ -17,6 +17,9 @@ spec:
       containers:
       - name: go-api
         image: us.gcr.io/vallery-demo/demo:1
+        env:
+        - name: RETURN_MSG
+          value: "We are the Borg"
         ports:
         - containerPort: 8080
         resources:

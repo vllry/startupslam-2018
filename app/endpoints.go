@@ -12,16 +12,15 @@ type apiResponse struct {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	if os.Getenv("MAKE_WORK") != "" {
-		for x := 0; x <= 1000; x++ {
-			for y := 0; y <= 100; y++ {
-				fmt.Println(x*y)
-			}
+	// Pretend this endpoint is computationally heavy.
+	for x := 0; x <= 500; x++ {
+		for y := 0; y <= 100; y++ {
+			fmt.Println(x*y)
 		}
 	}
 
 	responseStruct := apiResponse{
-		"API is running",
+		"API is running, env config is: " + os.Getenv("RETURN_MSG"),
 	}
 	response, err := json.Marshal(responseStruct)
 	if err != nil {
