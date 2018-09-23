@@ -35,8 +35,6 @@ We only need a cluster with a small quantity of resources. A 2-thread machine is
 
 https://console.cloud.google.com/kubernetes
 
-TODO defaults
-
 ## 3. Create the deployment (1 min)
 `kubectl apply -f k8s/deployment.yml`
 
